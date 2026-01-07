@@ -16,3 +16,11 @@ app.get('/', (req: Request, res: Response) => {
 // to serve all files from the 'public' directory.
   res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
+
+  // 5. Define a route handler for GET requests to the root URL ('/contact')
+  app.get('/contact', (req: Request, res: Response) => {
+    // Tell Express to use the 'express.static' middleware
+// to serve all files from the 'public' directory.
+    res.sendFile(path.join(__dirname, '../public', 'contact.html'));
+  });
+  
